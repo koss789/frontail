@@ -48,7 +48,7 @@ if (program.daemonize) {
   }
   appBuilder
     .static(path.join(__dirname, 'web/assets'))
-    .index(path.join(__dirname, 'web/index.html'), files, filesNamespace, program.theme);
+    .index(path.join(__dirname, 'web/index.html'), files, filesNamespace, program.url, program.theme);
 
   const builder = serverBuilder();
   if (doSecure) {
